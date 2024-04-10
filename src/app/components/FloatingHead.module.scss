@@ -1,0 +1,60 @@
+.floatingHead {
+  &--animate {
+    width: 500px;
+    animation: rotate 10s infinite linear, scale 5s infinite, flash 4s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+}
+
+.rotate {
+  animation: rotate 10s infinite linear;
+  object-fit: cover;
+  width: 500px;
+}
+
+.scale {
+  animation: scale 5s infinite;
+}
+
+.flash {
+  animation-delay: 2s;
+  animation: flash 4s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
+  background-color: black;
+}
+
+@keyframes flash {
+  0% {
+    background-color: black;
+  }
+
+  50% {
+    background-color: white;
+  }
+
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

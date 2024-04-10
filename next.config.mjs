@@ -6,9 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const nextConfig = {
-  sassOptions: {
-    includePaths: [join(__dirname, 'styles')],
-  }
+  // sassOptions: {
+  //   includePaths: [join(__dirname, 'styles')],
+  // }
 };
 
 export default nextConfig;
