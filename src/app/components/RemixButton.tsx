@@ -1,8 +1,12 @@
 'use client';
-import React from 'react';
+import React, {type ReactElement} from 'react';
 import styles from './RemixButton.module.scss';
 
-export default function RemixButton({onClick}) {
+type RemixButtonProps = {
+  onClick: () => void,
+};
+
+export default function RemixButton({onClick}: RemixButtonProps): ReactElement {
   const audioRef = React.useRef<HTMLAudioElement>(null);
 
   const handleButtonClick = () => {
